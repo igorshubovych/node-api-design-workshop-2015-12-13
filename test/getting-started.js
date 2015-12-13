@@ -9,11 +9,11 @@ const fetch = require('node-fetch'),
 const server = require('../src/hello-server');
 
 describe('hello world', () => {
-  before(done => server.listen(4000, done));
+  before(done => server.listen(5000, done));
   after(() => server.close());
 
   it('should respond to requests', co.wrap(function* () {
-    const response = yield fetch('http://localhost:4000/');
+    const response = yield fetch('http://localhost:5000/');
     assert(response.ok, 'Hello world response');
     const text = yield response.text();
     assert(text === 'Hello world', 'should say hello world');
