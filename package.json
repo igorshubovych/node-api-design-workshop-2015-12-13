@@ -5,6 +5,7 @@
   "main": "src/index.js",
   "scripts": {
     "start": "node src/index.js",
+    "cover": "istanbul cover _mocha",
     "test": "mocha test --recursive --reporter=nyan",
     "watch": "mocha --watch test --recursive --reporter=min --growl"
   },
