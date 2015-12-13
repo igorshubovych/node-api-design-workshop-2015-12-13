@@ -10,6 +10,8 @@
 
 // srv.listen(8080, '127.0.0.1');
 
-const api = require('./jsonapi-server');
+const api = require('./jsonapi-server'),
+  auth = require('./auth-proxy');
 
 api.listen(4000);
+auth.listen(4001);

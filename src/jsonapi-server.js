@@ -33,6 +33,11 @@ jsonApi.define({
     type: 'articles',
     body: 'Interesting',
     title: 'Fresh news'
+  }, {
+    id: '13',
+    type: 'articles',
+    body: 'Boring',
+    title: 'Old news'
   }]
 });
 
