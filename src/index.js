@@ -13,5 +13,5 @@
 const api = require('./jsonapi-server'),
   auth = require('./auth-proxy');
 
-api.listen(4000);
-auth.listen(4001);
+api.listen(5000);
+auth.listen(6000);

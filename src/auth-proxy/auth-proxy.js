@@ -3,7 +3,8 @@
 const express = require('express'),
   bodyParser = require('body-parser'),
   oauthserver = require('node-oauth2-server'),
-  http = require('http');
+  http = require('http'),
+  proxy = require('proxy-middleware');
 
 const model = require('./auth-model');
 
@@ -20,9 +21,7 @@ app.oauth = oauthserver({
 
 app.all('/oauth/token', app.oauth.grant());
 
-app.get('/', app.oauth.authorise(), function (req, res) {
-  res.send('Secret area');
-});
+app.get('*', app.oauth.authorise(), proxy('http://localhost:5000'));
 
 app.use(app.oauth.errorHandler());
 
