@@ -1,0 +1,30 @@
+{
+  "name": "node-api-design-workshop",
+  "version": "1.0.0",
+  "description": "API design with Node.js Workshop - Kyiv, December 13, 2015",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test --recursive --reporter=nyan",
+    "watch": "mocha --watch test --recursive --reporter=min --growl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igorshubovych/node-api-design-workshop-2015-12-13.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/igorshubovych/node-api-design-workshop-2015-12-13/issues"
+  },
+  "homepage": "https://github.com/igorshubovych/node-api-design-workshop-2015-12-13#readme",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "co": "^4.6.0",
+    "istanbul": "^0.4.1",
+    "mocha": "^2.3.4",
+    "node-fetch": "^1.3.3"
+  },
+  "dependencies": {
+    "co": "^4.6.0"
+  }
+}
